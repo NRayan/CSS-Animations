@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            transition: background-color 1s linear 2s;
+        }
+
+        .green {
+            background-color: green;
+            transition: all 1s linear 1s;
+        }
+
+        .red {
+            background-color: red
+        }
+
+        .blue {
+            background-color: blue;
+            transition: width 1s linear 0s;
+        }
+
+        .yellow {
+            background-color: yellow;
+            transition: opacity 250ms linear 0s;
+        }
+
+        .red:hover {
+            background-color: black;
+            transition-property: background-color;
+            transition-duration: 500ms;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+        }
+
+        .green:hover {
+            transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+            background-color: rgb(255, 0, 208);
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+        .blue:hover {
+            transition: width 2s linear 0s;
+            width: 350px;
+        }
+
+        .yellow:hover {
+            transition: opacity 250ms linear 0s;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box yellow"></div>
+</body>
+
+</html>
